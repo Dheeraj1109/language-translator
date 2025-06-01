@@ -71,20 +71,4 @@ To run the Streamlit UI (once implemented):
 streamlit run ui.py
 ```
 
-## Troubleshooting
-### **1. Model Loading Issues**
-If you get an error related to **model loading**, ensure you have an internet connection and that the model name is correctly spelled. Try manually downloading the model:
-```python
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-es")
-tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-es")
-```
 
-### **2. Multiprocessing Issues on Windows**
-Ensure that your script runs inside the `if __name__ == "__main__":` block.
-
-### **3. Missing `sacremoses` Warning**
-Install `sacremoses` manually:
-```sh
-pip install sacremoses
-```
